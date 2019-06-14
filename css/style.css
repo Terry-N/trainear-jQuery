@@ -1,0 +1,87 @@
+body {
+
+  font-family: Courier New;
+}
+
+h1 {
+  /* display: inline-block; */
+  font-family: monospace;
+  font-size: 3.0em;
+}
+
+.options {
+
+  background-color: rgb(133, 218, 247);
+  border: 2px solid black;
+}
+
+div, fieldset {
+
+  display: inline-block;
+  /* border: 2px solid black; */
+  margin: 2px;
+  padding: 5px 10px;
+}
+
+fieldset {
+
+  background-color: white;
+}
+
+button {
+
+  background-color: rgb(219, 235, 255);
+  margin: 2px;
+  padding: 2px;
+  font-size: 0.8em;
+  font-family: Courier;
+  width: 120px;
+}
+
+label {
+
+  width: 120px;
+}
+
+table, th, td {
+
+  margin: 5px;
+  border: 1px solid black;
+}
+
+th, td {
+
+  padding: 5px;
+}
+
+/* .stats {
+
+  width: 500px;
+} */
+
+.stats th {
+
+  width: 100px;
+  background-color: rgb(133, 218, 247);
+}
+
+.stats td {
+
+  width: 100px;
+  background-color: lightgreen;
+}
+
+.options td {
+
+  background-color: gold;
+}
+
+.blueBack {
+
+  background-color: skyblue;
+}
+
+.border {
+
+  border: 3px dotted black;
+}

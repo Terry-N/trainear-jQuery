@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  Name: Terry Nippard
+  Program: Trainear
+  Date: June 9, 2019
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Terry Nippard - Exercise 1</title>
+  <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script> -->
+  <script type="text/javascript" src="js/logic.js"></script>
+</head>
+<body>
+  <div align="center">
+    <h1>Trainear</h1>
+
+    <!-- <audio controls>Player</audio> -->
+    <div id="slider"></div>
+
+    <div>
+      <button id="play">Play</button>
+      <button id="reset">Reset</button>
+      <button id="instructions">Instructions</button>
+      <button id="practice">To Practice</button>
+    </div>
+    <br />
+
+    <!-- button for guessing each 12 notes -->
+    <div>
+      <p id="action" style="font-weight:bold;">
+        Hit Play!
+      </p>
+      <button id="unison" class="note">Unison</button>
+      <button id="minor2" class="note">Minor 2</button>
+      <button id="major2" class="note">Major 2</button>
+      <button id="minor3" class="note">Minor 3</button>
+      <br />
+      <button id="major3" class="note">Major 3</button>
+      <button id="perfect4" class="note">Perfect 4</button>
+      <button id="tritone" class="note">Tritone</button>
+      <button id="perfect5" class="note">Perfect 5</button>
+      <br />
+      <button id="minor6" class="note">Minor 6</button>
+      <button id="major6" class="note">Major 6</button>
+      <button id="minor7" class="note">Minor 7</button>
+      <button id="major7" class="note">Major 7</button>
+    </div>
+    <br />
+
+    <!-- table for score etc. -->
+    <div>
+      <table class="stats">
+        <tr>
+          <th>Correct:</th>
+          <th>Incorrect:</th>
+          <th>Accuracy:</th>
+          <th>Last:</th>
+        </tr>
+        <tr>
+          <td id="correct">0</th>
+          <td id="incorrect">0</th>
+          <td id="accuracy">0.00%</th>
+          <td id="last">None</th>
+        </tr>
+      </table>
+    </div>
+    <br />
+
+    <div class="options">
+      <fieldset id="intervals">
+        <b>Intervals:</b>
+        <br />
+        <table>
+          <tr>
+            <td>
+              <label for="chkunison">
+                <input type="checkbox" name="intervals" id="chkunison" value="Unison" checked="checked">Unison
+              </label>
+            </td>
+            <td>
+              <label for="chkminor2">
+                <input type="checkbox" name="intervals" id="chkminor2" value="Minor 2" checked="checked">Minor 2
+              </label>
+            </td>
+            <td>
+              <label for="chkmajor2">
+                <input type="checkbox" name="intervals" id="chkmajor2" value="Major 2" checked="checked">Major 2
+              </label>
+            </td>
+            <td>
+              <label for="chkminor3">
+                <input type="checkbox" name="intervals" id="chkminor3" value="Minor 3" checked="checked">Minor 3
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="chkmajor3">
+                <input type="checkbox" name="intervals" id="chkmajor3" value="Major 3" checked="checked">Major 3
+              </label>
+            </td>
+            <td>
+              <label for="chkperfect4">
+                <input type="checkbox" name="intervals" id="chkperfect4" value="Perfect 4" checked="checked">Perfect 4
+              </label>
+            </td>
+            <td>
+              <label for="chktritone">
+                <input type="checkbox" name="intervals" id="chktritone" value="Tritone" checked="checked">Tritone
+              </label>
+            </td>
+            <td>
+              <label for="chkperfect5">
+                <input type="checkbox" name="intervals" id="chkperfect5" value="Perfect 5" checked="checked">Perfect 5
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="chkminor6">
+                <input type="checkbox" name="intervals" id="chkminor6" value="Minor 6" checked="checked">Minor 6
+              </label>
+            </td>
+            <td>
+              <label for="chkmajor6">
+                <input type="checkbox" name="intervals" id="chkmajor6" value="Major 6" checked="checked">Major 6
+              </label>
+            </td>
+            <td>
+              <label for="chkminor7">
+                <input type="checkbox" name="intervals" id="chkminor7" value="Minor 7" checked="checked">Minor 7
+              </label>
+            </td>
+            <td>
+              <label for="chkmajor7">
+                <input type="checkbox" name="intervals" id="chkmajor7" value="Major 7" checked="checked">Major 7
+              </label>
+            </td>
+          </tr>
+        </table>
+        <button id="checkAll">Select All</button>
+        <button id="uncheckAll">Deselect All</button>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <b>Octaves:</b>
+        <br />
+        <table>
+          <tr>
+            <td>
+              <input type="radio" name="octaves" value="1" checked>1
+            </td>
+            <td>
+              <input type="radio" name="octaves" value="2">2
+            </td>
+            <td>
+              <input type="radio" name="octaves" value="3" disabled>3
+            </td>
+          </tr>
+        </table>
+        <!-- <label for="" -->
+      </fieldset>
+      <br />
+
+      <div id="samples">
+        <button id="hideSamples">Return</button>
+        <button id="unison" class="note">Unison</button>
+        <button id="minor2" class="note">Minor 2</button>
+        <button id="major2" class="note">Major 2</button>
+        <button id="minor3" class="note">Minor 3</button>
+        <br />
+        <button id="major3" class="note">Major 3</button>
+        <button id="perfect4" class="note">Perfect 4</button>
+        <button id="tritone" class="note">Tritone</button>
+        <button id="perfect5" class="note">Perfect 5</button>
+        <br />
+        <button id="minor6" class="note">Minor 6</button>
+        <button id="major6" class="note">Major 6</button>
+        <button id="minor7" class="note">Minor 7</button>
+        <button id="major7" class="note">Major 7</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
