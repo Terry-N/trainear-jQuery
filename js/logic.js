@@ -275,10 +275,12 @@ $('document').ready(function () {
   $("#instructions").click(function() {
 
     alert("The trainer will play two notes. You must use your ear to guess which"
-    + " interval is played. (Interval refers to the difference between the notes.)\n\n"
-    + "The first is the root, which is chosen randomly from your selecitons under 'intervals'.\n\n"
-    + "The second note is an interval of the root note, which is"
-    + " chosen randomly from your selections under 'intervals'.\n\n"
+    + " interval is played by clicking the corresponding button, e.g. Major 3rd.\n\n"
+    + "Note: 'Interval' refers to the difference between the notes.\n\n"
+    + "The first note played is the root, which is chosen randomly from your"
+    + " selections under 'intervals'.\n\n"
+    + "The second note played is a random interval above the root note, which is"
+    + " chosen from your selections under 'intervals'.\n\n"
     + "(Zero interval selections allows all possible intervals to be played.)");
   });
 });
