@@ -274,11 +274,11 @@ $('document').ready(function () {
 
   $("#instructions").click(function() {
 
-    alert("The trainer will play two notes. The first is the root, which"
-    + " is chosen randomly from the notes you select here.\n\n"
+    alert("The trainer will play two notes. You must use your ear to guess which"
+    + " interval is played. (Interval refers to the difference between the notes.)\n\n"
+    + "The first is the root, which is chosen randomly from your selecitons under 'intervals'.\n\n"
     + "The second note is an interval of the root note, which is"
-    + " chosen randomly from the intervals you select here.\n\n"
-    + "You must use your ear to guess which interval is played.\n\n"
-    + "(Zero selections here plays all options at random.)");
+    + " chosen randomly from your selections under 'intervals'.\n\n"
+    + "(Zero interval selections allows all possible intervals to be played.)");
   });
 });
